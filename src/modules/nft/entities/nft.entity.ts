@@ -15,5 +15,8 @@ export class NftEntity {
   logoUrl: string;
 
   @Column()
+  nftId: number;
+
+  @Column()
   userWalletAddress: string;
 }

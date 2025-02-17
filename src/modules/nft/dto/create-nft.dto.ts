@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsString, IsNotEmpty, IsUrl } from 'class-validator';
+import { IsString, IsNotEmpty, IsUrl, IsNumber } from 'class-validator';
 
 export class CreateNftDto {
   @ApiProperty()
@@ -16,6 +16,11 @@ export class CreateNftDto {
   @IsUrl()
   @IsNotEmpty()
   logoUrl: string;
+
+  @ApiProperty()
+  @IsNumber()
+  @IsNotEmpty()
+  nftId: number;
 
   @ApiProperty()
   @IsString()

@@ -29,7 +29,7 @@ export class NftController {
 
   constructor(private readonly nftService: NftService) {}
 
-  @Post()
+  @Post('store-nft')
   @ApiOperation({ summary: 'Store NFT Data' })
   @ApiBody({ description: 'NFT data to store', type: CreateNftDto })
   @ApiResponse({ status: 201, description: 'NFT data stored successfully' })
@@ -99,7 +99,7 @@ export class NftController {
   }
 
   @Get(':id')
-  @ApiOperation({ summary: 'Get NFT Data by ID' })
+  @ApiOperation({ summary: 'Get NFT Data by NFT ID' })
   @ApiResponse({
     status: 200,
     description: 'NFT data retrieved successfully',

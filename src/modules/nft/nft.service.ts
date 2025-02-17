@@ -22,7 +22,7 @@ export class NftService {
   }
 
   async getNftById(id: number): Promise<NftEntity> {
-    const nft = await this.nftRepository.findOne({ where: { id } });
+    const nft = await this.nftRepository.findOne({ where: { nftId: id } });
 
     if (!nft) {
       throw new NotFoundException('NFT not found');

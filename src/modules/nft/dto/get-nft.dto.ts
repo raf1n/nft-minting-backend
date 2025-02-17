@@ -14,5 +14,8 @@ export class GetNftDto {
   logoUrl: string;
 
   @ApiProperty()
+  nftId: number;
+
+  @ApiProperty()
   userWalletAddress: string;
 }
